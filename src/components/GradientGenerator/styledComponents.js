@@ -6,7 +6,7 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #ffffff;
+  //   color: #ffffff;
   //   background-image: linear-gradient(
   //     ${props => props.direction},
   //     ${props => props.left},
@@ -15,15 +15,15 @@ export const Container = styled.div`
 `
 
 export const Heading = styled.h1`
-  color: #ffffff79;
+  //   color: #ffffff79;
 `
 
 export const Paragraph = styled.p`
-  color: #ffffff79;
+  //   color: #ffffff79;
 `
 
 export const ParagraphWhite = styled(Paragraph)`
-  color: #ffffff;
+  //   color: #ffffff;
 `
 
 export const Input = styled.input`
