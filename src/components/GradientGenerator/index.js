@@ -49,14 +49,16 @@ class GradientGenerator extends Component {
     const {activeTabId, activeBtn, left, right, leftEl, rightEl} = this.state
     console.log(left, right)
     return (
-      <MainContainer activeTab={{activeTabId, left, right}}>
+      <MainContainer
+        data-testid="graidentGenerator"
+        activeTab={{activeTabId, left, right}}
+      >
         <Heading>Generate a CSS Color Gradient</Heading>
         <Paragraph>Choose Direction</Paragraph>
         <UnorderedList>
           {gradientDirectionsList.map(each => (
-            <li>
+            <li key={each.directionId}>
               <GradientDirectionItem
-                key={each.directionId}
                 direction={each}
                 isActiveTabUpdate={this.isActiveTabUpdate}
                 isActive={activeBtn === each.value}
@@ -81,11 +83,7 @@ class GradientGenerator extends Component {
             onChange={this.rightColorChange}
           />
         </Container>
-        <GeneratorButton
-          data-testid="graidentGenerator"
-          type="button"
-          onClick={this.onGenerate}
-        >
+        <GeneratorButton type="button" onClick={this.onGenerate}>
           Generate
         </GeneratorButton>
       </MainContainer>

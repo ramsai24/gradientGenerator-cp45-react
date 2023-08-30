@@ -74,7 +74,7 @@ export const Button = styled.button`
   background-color: ${props => (props.outline ? 'transparent' : '#ffffff79')};
 `
 
-export const Label = styled.label``
+export const Label = styled.p``
 
 export const GeneratorButton = styled(Button)`
   background-color: #00c9b7;
