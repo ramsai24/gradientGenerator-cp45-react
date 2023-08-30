@@ -14,5 +14,6 @@ export const Button = styled.button`
   height: 40px;
   color: #1e293b;
   margin: 16px;
-  background-color: ${props => (props.isActive ? '#ffffff' : 'transparent')};
+  background-color: #ffffff;
+  opacity: ${props => (props.isActive ? '1' : '0.5')};
 `

@@ -54,12 +54,14 @@ class GradientGenerator extends Component {
         <Paragraph>Choose Direction</Paragraph>
         <UnorderedList>
           {gradientDirectionsList.map(each => (
-            <GradientDirectionItem
-              key={each.directionId}
-              direction={each}
-              isActiveTabUpdate={this.isActiveTabUpdate}
-              isActive={activeBtn === each.value}
-            />
+            <li>
+              <GradientDirectionItem
+                key={each.directionId}
+                direction={each}
+                isActiveTabUpdate={this.isActiveTabUpdate}
+                isActive={activeBtn === each.value}
+              />
+            </li>
           ))}
         </UnorderedList>
         <Paragraph>Pick the Colors</Paragraph>
@@ -79,7 +81,11 @@ class GradientGenerator extends Component {
             onChange={this.rightColorChange}
           />
         </Container>
-        <GeneratorButton type="button" onClick={this.onGenerate}>
+        <GeneratorButton
+          data-testid="graidentGenerator"
+          type="button"
+          onClick={this.onGenerate}
+        >
           Generate
         </GeneratorButton>
       </MainContainer>
