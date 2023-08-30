@@ -50,7 +50,7 @@ class GradientGenerator extends Component {
     console.log(left, right)
     return (
       <MainContainer
-        data-testid="graidentGenerator"
+        data-testid="gradientGenerator"
         activeTab={{activeTabId, left, right}}
       >
         <Heading>Generate a CSS Color Gradient</Heading>
